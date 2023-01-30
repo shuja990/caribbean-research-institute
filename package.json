@@ -1,0 +1,25 @@
+{
+  "name": "medgar",
+  "version": "1.0.0",
+  "description": "A research institute website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "author": "Shuja Ali",
+  "license": "MIT",
+  "dependencies": {
+    "@lottiefiles/lottie-player": "1.6.0",
+    "dangerous-html": "0.1.11",
+    "date-fns": "^2.29.3",
+    "moment": "^2.29.4",
+    "next": "^12.1.0",
+    "prop-types": "15.7.2",
+    "react": "^17.0.2",
+    "react-big-calendar": "^1.5.2",
+    "react-dom": "^17.0.2"
+  }
+}
