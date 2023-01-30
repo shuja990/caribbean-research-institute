@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 import PropTypes from 'prop-types'
 
@@ -46,12 +47,17 @@ const Footer = (props) => {
         </div>
         <div className="footer-links">
           <div className="footer-column">
-            <span className="link">{props.Text}</span>
+            <Link href="/news">
+              <a className="footer-link link">{props.Text}</a>
+            </Link>
             <span className="link">{props.Text1}</span>
-            <span className="link">{props.Text2}</span>
-            <span className="link">{props.Text3}</span>
+            <Link href="/events">
+              <a className="footer-link1 link">{props.Text2}</a>
+            </Link>
+            <Link href="/gallery">
+              <a className="footer-link2 link">{props.Text3}</a>
+            </Link>
             <span className="link">{props.Text4}</span>
-            <span className="link">{props.Text5}</span>
           </div>
           <div className="footer-column1">
             <span className="link">{props.Text6}</span>
@@ -188,6 +194,15 @@ const Footer = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
+          .footer-link {
+            text-decoration: none;
+          }
+          .footer-link1 {
+            text-decoration: none;
+          }
+          .footer-link2 {
+            text-decoration: none;
+          }
           .footer-column1 {
             width: 100%;
             display: flex;
@@ -226,19 +241,18 @@ const Footer = (props) => {
 }
 
 Footer.defaultProps = {
-  Text5: 'Contact',
   Text9: 'Facebook',
-  Text1: 'Training\n',
+  Text1: 'YouTube',
   Copyright: '©2023 Midalta. All Rights Reserved.',
   image_alt: 'image',
-  Text: 'About',
+  Text: 'News',
   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
   image_src: '/playground_assets/group%201639.svg',
-  Text3: 'Membership',
+  Text3: 'Gallery',
   rootClassName: '',
   text1: 'crc@mec.cuny.edu',
   Text8: 'Twitter',
-  Text4: 'Blog',
+  Text4: 'Digital Archive',
   Text6: 'Linkedin',
   Text2: 'Events',
   text2: '7182706218',
@@ -249,7 +263,6 @@ Footer.defaultProps = {
 }
 
 Footer.propTypes = {
-  Text5: PropTypes.string,
   Text9: PropTypes.string,
   Text1: PropTypes.string,
   Copyright: PropTypes.string,

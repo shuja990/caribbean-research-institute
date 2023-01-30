@@ -19,8 +19,13 @@ const Events = (props) => {
           />
         </Head>
         <Navbar rootClassName="navbar-root-class-name4"></Navbar>
-        <div className="events-blog">
-          <div className="events-container1" style={{ width: "100%" }}>
+        <div className="events-blog" 
+            style={{ width: "100%", marginLeft: "auto", marginRight: "auto" }}
+            >
+          <div
+            className="events-container1"
+            style={{ width: "100%", marginLeft: "auto", marginRight: "auto" }}
+          >
             <EventsCalendar />
           </div>
         </div>
