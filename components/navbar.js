@@ -41,6 +41,11 @@ const Navbar = (props) => {
               <button className="navbar-button2 button">
                 <span>{props.text2}</span>
               </button>
+              <Link href="/team">
+                <a className="navbar-link3 button">
+                  <span>My Team</span>
+                </a>
+              </Link>
               <Link href="/gallery">
                 <a className="navbar-link3 button">
                   <span>{props.text3}</span>
@@ -88,6 +93,11 @@ const Navbar = (props) => {
               <Link href="/events">
                 <a className="navbar-link7 button">
                   <span>{props.text82}</span>
+                </a>
+              </Link>
+              <Link href="/team">
+                <a className="navbar-link7 button">
+                  <span>My Team</span>
                 </a>
               </Link>
               <button className="navbar-button5 button">
