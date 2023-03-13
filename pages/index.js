@@ -1,12 +1,12 @@
-import React from 'react'
-import Head from 'next/head'
+import React from "react";
+import Head from "next/head";
 
-import DangerousHTML from 'dangerous-html/react'
+import DangerousHTML from "dangerous-html/react";
 
-import Navbar from '../components/navbar'
-import Card from '../components/card'
-import Services from '../components/services'
-import Footer from '../components/footer'
+import Navbar from "../components/navbar";
+import Card from "../components/card";
+import Services from "../components/services";
+import Footer from "../components/footer";
 
 const Home = (props) => {
   return (
@@ -99,169 +99,8 @@ const Home = (props) => {
             </div>
           </div>
         </section>
-        <section className="home-testimonials">
-          <div className="home-container1">
-            <div className="home-content1">
-              <div className="active-quote quote">
-                <img
-                  alt="image"
-                  src="/playground_assets/foto-sushi-6anudmpilw4-unsplash-200h.png"
-                  role="quote-avatar"
-                  className="home-image04"
-                />
-                <p role="quote-content" className="home-quote1">
-                  &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                  &quot;
-                </p>
-                <div className="home-author">
-                  <span role="quote-author" className="home-name">
-                    Michael B.
-                  </span>
-                  <span role="quote-origin" className="home-origin">
-                    Clean Tech
-                  </span>
-                </div>
-              </div>
-              <div className="quote">
-                <img
-                  alt="image"
-                  src="/playground_assets/foto-sushi-ocow8-uiajk-unsplash%20%5B1%5D%201-200h.png"
-                  role="quote-avatar"
-                  className="home-image05"
-                />
-                <p role="quote-content" className="home-quote3">
-                  <span className="home-text12">
-                    &quot;This is a very fascinating website&quot;
-                  </span>
-                  <br></br>
-                  <span>
-                    eiusmod tempor incididunt ut laborqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation.
-                  </span>
-                  <br></br>
-                </p>
-                <div className="home-author1">
-                  <span role="quote-author" className="home-name1">
-                    Michael B.
-                  </span>
-                  <span role="quote-origin" className="home-origin1">
-                    Clean Tech
-                  </span>
-                </div>
-              </div>
-              <div className="quote">
-                <img
-                  alt="image"
-                  src="https://images.unsplash.com/photo-1586716402203-79219bede43c?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDE0fHxwb3RyYWl0fGVufDB8fHx8MTY2OTcyODk4OA&amp;ixlib=rb-4.0.3&amp;w=200"
-                  role="quote-avatar"
-                  className="home-image06"
-                />
-                <p role="quote-content" className="home-quote5">
-                  <span className="home-text16">
-                    &quot;I really love how well this is done! :D&quot;
-                  </span>
-                  <br></br>
-                  <span>eiusmod tempor incididunt ut labore et</span>
-                  <br></br>
-                  <span> dolore magna aliqua. Ut enim </span>
-                  <br></br>
-                </p>
-                <div className="home-author2">
-                  <span role="quote-author" className="home-name2">
-                    Herola
-                  </span>
-                  <span role="quote-origin" className="home-origin2">
-                    TechCo
-                  </span>
-                </div>
-              </div>
-              <div className="quote">
-                <img
-                  alt="image"
-                  src="https://images.unsplash.com/photo-1618151313441-bc79b11e5090?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEzfHxwb3RyYWl0fGVufDB8fHx8MTY2OTcyODk4OA&amp;ixlib=rb-4.0.3&amp;w=200"
-                  role="quote-avatar"
-                  className="home-image07"
-                />
-                <p role="quote-content" className="home-quote7">
-                  <span className="home-text22">
-                    &quot;Nothing will every beat this!&quot;
-                  </span>
-                  <br></br>
-                  <span>
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation Nsdadasd
-                    asdadasd
-                  </span>
-                  <br></br>
-                </p>
-                <div className="home-author3">
-                  <span role="quote-author" className="home-name3">
-                    John A.
-                  </span>
-                  <span role="quote-origin" className="home-origin3">
-                    Rebo
-                  </span>
-                </div>
-              </div>
-              <div className="home-controls">
-                <div id="quote-previous" className="home-previous">
-                  <img
-                    alt="image"
-                    src="/playground_assets/frame.svg"
-                    className="home-image08"
-                  />
-                </div>
-                <div id="quote-next" className="home-next">
-                  <img
-                    alt="image"
-                    src="/playground_assets/frame.svg"
-                    className="home-image09"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <DangerousHTML
-              html={`<script>
-  /*
-              Quote Slider - Code Embed
-              */
 
-              let current = 1;
-
-              const nextButton = document.querySelector("#quote-next");
-              const previousButton = document.querySelector("#quote-previous");
-              const quotes = document.querySelectorAll(".quote");
-
-              if(nextButton&&previousButton){
-                nextButton.addEventListener("click", () => {
-                quotes.forEach((quote) => {
-                quote.classList.remove("active-quote");
-                });
-
-                current == quotes.length ? current = 1 : current++
-                quotes[current-1].classList.add("active-quote")
-                });
-
-                previousButton.addEventListener("click", () => {
-                quotes.forEach((quote) => {
-                quote.classList.remove("active-quote");
-                });
-
-                current == 1 ? current = quotes.length : current--
-                quotes[current-1].classList.add("active-quote")
-                });
-
-              }
-</script>
-`}
-            ></DangerousHTML>
-          </div>
-        </section>
-        <section className="home-partners">
+        {/* <section className="home-partners">
           <div className="home-content2">
             <h2 className="home-text26">Our partners</h2>
             <p className="home-text27">
@@ -506,7 +345,7 @@ const Home = (props) => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <Services></Services>
         <section className="home-banner">
           <div className="home-container2">
@@ -617,7 +456,6 @@ const Home = (props) => {
             </div>
           </div>
         </section>
-        <Footer></Footer>
         <div>
           <DangerousHTML
             html={`<style>
@@ -627,7 +465,9 @@ const Home = (props) => {
 </style>`}
           ></DangerousHTML>
         </div>
+        <Footer></Footer>
       </div>
+
       <style jsx>
         {`
           .home-container {
@@ -1829,7 +1669,7 @@ const Home = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

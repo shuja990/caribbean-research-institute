@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const Navbar = (props) => {
   return (
@@ -43,7 +43,7 @@ const Navbar = (props) => {
               </button>
               <Link href="/team">
                 <a className="navbar-link3 button">
-                  <span>My Team</span>
+                  <span>Team</span>
                 </a>
               </Link>
               <Link href="/gallery">
@@ -97,7 +97,7 @@ const Navbar = (props) => {
               </Link>
               <Link href="/team">
                 <a className="navbar-link7 button">
-                  <span>My Team</span>
+                  <span>Team</span>
                 </a>
               </Link>
               <button className="navbar-button5 button">
@@ -152,6 +152,8 @@ const Navbar = (props) => {
             z-index: 100;
             position: relative;
             align-items: center;
+            background: #ebcf02;
+            margin-bottom: 6rem;
             flex-direction: column;
           }
           .navbar-navbar-interactive {
@@ -283,6 +285,7 @@ const Navbar = (props) => {
             display: flex;
             z-index: 100;
             position: fixed;
+            background: #ebcf02;
             transform: translateX(100%);
             transition: 0.5s;
             padding-top: var(--dl-space-space-threeunits);
@@ -291,7 +294,6 @@ const Navbar = (props) => {
             flex-direction: column;
             padding-bottom: var(--dl-space-space-threeunits);
             justify-content: flex-start;
-            background-color: #fff;
           }
           .navbar-top {
             width: 100%;
@@ -494,28 +496,28 @@ const Navbar = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
 Navbar.defaultProps = {
-  text8: 'News',
-  text811: 'Digital Archive',
-  image_src1: '/playground_assets/logo1-200h.png',
-  text1: 'Events\n',
-  text4: 'Digital Archive\n',
-  text82: 'Events',
-  text7: 'Home',
-  text2: 'Youtube',
-  Hamburger_src: '/playground_assets/group%202084%5B1%5D.svg',
-  Hamburger_alt: 'image',
-  image_alt1: 'image',
-  text5: 'Caribbean Research Center',
-  text3: 'Gallery',
-  text: 'News',
-  text81: 'YouTube Channel',
-  text812: 'Gallery',
-  rootClassName: '',
-}
+  text8: "News",
+  text811: "Digital Archive",
+  image_src1: "/playground_assets/logo.png",
+  text1: "Events\n",
+  text4: "Digital Archive\n",
+  text82: "Events",
+  text7: "Home",
+  text2: "Youtube",
+  Hamburger_src: "/playground_assets/group%202084%5B1%5D.svg",
+  Hamburger_alt: "image",
+  image_alt1: "image",
+  text5: "Caribbean Research Center",
+  text3: "Gallery",
+  text: "News",
+  text81: "YouTube Channel",
+  text812: "Gallery",
+  rootClassName: "",
+};
 
 Navbar.propTypes = {
   text8: PropTypes.string,
@@ -535,6 +537,6 @@ Navbar.propTypes = {
   text81: PropTypes.string,
   text812: PropTypes.string,
   rootClassName: PropTypes.string,
-}
+};
 
-export default Navbar
+export default Navbar;

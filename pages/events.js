@@ -29,6 +29,7 @@ const Events = (props) => {
             <EventsCalendar />
           </div>
         </div>
+        
         <div className="events-banner">
           <h1 className="events-text">UPCOMING EVENTS</h1>
           <span className="events-text01">
@@ -169,7 +170,6 @@ const Events = (props) => {
             text-align: center;
           }
           .events-text01 {
-            max-width: var(--dl-size-size-maxwidth);
             margin-top: var(--dl-space-space-twounits);
             text-align: center;
             margin-bottom: var(--dl-space-space-twounits);
@@ -184,7 +184,6 @@ const Events = (props) => {
             width: 100%;
             display: flex;
             padding: var(--dl-space-space-threeunits);
-            max-width: var(--dl-size-size-maxwidth);
             align-items: center;
             flex-direction: column;
             justify-content: space-between;
@@ -234,7 +233,6 @@ const Events = (props) => {
             text-align: center;
           }
           .events-text06 {
-            max-width: var(--dl-size-size-maxwidth);
             margin-top: var(--dl-space-space-twounits);
             text-align: center;
             margin-bottom: var(--dl-space-space-twounits);
@@ -249,7 +247,6 @@ const Events = (props) => {
             width: 100%;
             display: flex;
             padding: var(--dl-space-space-threeunits);
-            max-width: var(--dl-size-size-maxwidth);
             align-items: center;
             flex-direction: column;
             justify-content: space-between;

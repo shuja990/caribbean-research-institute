@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import Branding from './branding'
+import Branding from "./branding";
 
 const Footer = (props) => {
   return (
@@ -73,13 +73,13 @@ const Footer = (props) => {
             width: 100%;
             display: flex;
             position: relative;
-            max-width: var(--dl-size-size-maxwidth);
+            padding: 10px;
             align-items: flex-start;
             padding-left: var(--dl-space-space-oneandhalfunits);
-            margin-bottom: var(--dl-space-space-fourunits);
             padding-right: var(--dl-space-space-oneandhalfunits);
             flex-direction: row;
             justify-content: space-between;
+            background: #ebcf02;
           }
           .footer-information {
             gap: var(--dl-space-space-fiveunits);
@@ -237,30 +237,30 @@ const Footer = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
 Footer.defaultProps = {
-  Text9: 'Facebook',
-  Text1: 'YouTube',
-  Copyright: '©2023 Midalta. All Rights Reserved.',
-  image_alt: 'image',
-  Text: 'News',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
-  image_src: '/playground_assets/group%201639.svg',
-  Text3: 'Gallery',
-  rootClassName: '',
-  text1: 'crc@mec.cuny.edu',
-  Text8: 'Twitter',
-  Text4: 'Digital Archive',
-  Text6: 'Linkedin',
-  Text2: 'Events',
-  text2: '7182706218',
-  image_alt1: 'image',
-  image_src1: '/playground_assets/group%201640.svg',
-  Text7: 'Instagram',
-  text21: '1150 Carroll Street, Rms C313-C315, Brooklyn NY 11225',
-}
+  Text9: "Facebook",
+  Text1: "YouTube",
+  Copyright: "©2023 Midalta. All Rights Reserved.",
+  image_alt: "image",
+  Text: "News",
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
+  image_src: "/playground_assets/group%201639.svg",
+  Text3: "Gallery",
+  rootClassName: "",
+  text1: "crc@mec.cuny.edu",
+  Text8: "Twitter",
+  Text4: "Digital Archive",
+  Text6: "Linkedin",
+  Text2: "Events",
+  text2: "7182706218",
+  image_alt1: "image",
+  image_src1: "/playground_assets/group%201640.svg",
+  Text7: "Instagram",
+  text21: "1150 Carroll Street, Rms C313-C315, Brooklyn NY 11225",
+};
 
 Footer.propTypes = {
   Text9: PropTypes.string,
@@ -282,6 +282,6 @@ Footer.propTypes = {
   image_src1: PropTypes.string,
   Text7: PropTypes.string,
   text21: PropTypes.string,
-}
+};
 
-export default Footer
+export default Footer;

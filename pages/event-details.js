@@ -1,7 +1,8 @@
-import React from 'react'
-import Head from 'next/head'
+import React from "react";
+import Head from "next/head";
 
-import Navbar from '../components/navbar'
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 const EventDetails = (props) => {
   return (
@@ -25,14 +26,14 @@ const EventDetails = (props) => {
                   non volutpat turpis.
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: ' ',
+                      __html: " ",
                     }}
                   />
                 </span>
                 <span>
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: ' ',
+                      __html: " ",
                     }}
                   />
                 </span>
@@ -45,14 +46,14 @@ const EventDetails = (props) => {
                   tortor.
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: ' ',
+                      __html: " ",
                     }}
                   />
                 </span>
                 <span>
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: ' ',
+                      __html: " ",
                     }}
                   />
                 </span>
@@ -135,6 +136,7 @@ const EventDetails = (props) => {
             </div>
           </div>
         </div>
+        <Footer rootClassName="footer-root-class-name1"></Footer>
       </div>
       <style jsx>
         {`
@@ -389,7 +391,7 @@ const EventDetails = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default EventDetails
+export default EventDetails;

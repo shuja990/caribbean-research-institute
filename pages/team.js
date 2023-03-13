@@ -9,6 +9,7 @@ import Sasha from "../public/playground_assets/sasha.jpg";
 
 import Navbar from "../components/navbar";
 import BlogPostCard2 from "../components/blog-post-card2";
+import Footer from "../components/footer";
 
 const MyTeam = (props) => {
   const data = [
@@ -82,6 +83,7 @@ const MyTeam = (props) => {
             ))}
           </div>
         </div>
+        <Footer rootClassName="footer-root-class-name1"></Footer>
       </div>
       <style jsx>
         {`

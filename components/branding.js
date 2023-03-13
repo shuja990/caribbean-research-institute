@@ -55,7 +55,7 @@ const Branding = (props) => {
 }
 
 Branding.defaultProps = {
-  image_src: '/playground_assets/logo1-200h.png',
+  image_src: '/playground_assets/logo.png',
   text1: '',
   image_alt: 'image',
 }

@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 import Navbar from '../components/navbar'
 import GalleryCard3 from '../components/gallery-card3'
+import Footer from '../components/footer'
 
 const Gallery = (props) => {
   return (
@@ -101,6 +102,7 @@ const Gallery = (props) => {
             ></GalleryCard3>
           </div>
         </div>
+        <Footer rootClassName="footer-root-class-name1"></Footer>
       </div>
       <style jsx>
         {`

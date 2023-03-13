@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const Card = (props) => {
   return (
@@ -16,6 +16,7 @@ const Card = (props) => {
         {`
           .card-card {
             position: relative;
+            background: #ebcf02;
           }
           .card-header {
             gap: var(--dl-space-space-oneandhalfunits);
@@ -28,7 +29,7 @@ const Card = (props) => {
             object-fit: cover;
           }
           .card-heading {
-            color: rgb(18, 40, 33);
+            color: rgb(18, 40, 33) !important;
             font-size: 24px;
             max-width: 600px;
             font-style: normal;
@@ -43,20 +44,20 @@ const Card = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
 Card.defaultProps = {
-  Icon: '/playground_assets/group%201643.svg',
-  Title: 'High-impact business services',
+  Icon: "/playground_assets/group%201643.svg",
+  Title: "High-impact business services",
   Description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-}
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+};
 
 Card.propTypes = {
   Icon: PropTypes.string,
   Title: PropTypes.string,
   Description: PropTypes.string,
-}
+};
 
-export default Card
+export default Card;

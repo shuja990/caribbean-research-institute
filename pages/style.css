@@ -34,6 +34,7 @@
   --dl-space-space-threeunits: 48px;
   --dl-space-space-oneandhalfunits: 24px;
 }
+
 .button {
   color: rgb(18, 40, 33);
   cursor: pointer;
@@ -48,6 +49,7 @@
   padding-bottom: var(--dl-space-space-unit);
   background-color: rgba(230, 249, 224, 1);
 }
+
 .button:hover {
   opacity: 0.5;
 }
@@ -61,6 +63,7 @@
   border-radius: 4px;
   background-color: var(--dl-color-gray-white);
 }
+
 .list {
   width: 100%;
   margin: 1em 0px 1em 0px;
@@ -69,13 +72,16 @@
   list-style-type: none;
   list-style-position: outside;
 }
+
 .list-item {
   display: list-item;
 }
+
 .teleport-show {
   display: flex !important;
   transform: translateX(0%) !important;
 }
+
 .switch {
   cursor: pointer;
   font-size: 24px;
@@ -86,12 +92,15 @@
   padding-bottom: var(--dl-space-space-oneandhalfunits);
   border-bottom-width: 1px;
 }
+
 .switch:hover {
   opacity: 0.5;
 }
+
 .switch-active {
   border-color: #000000;
 }
+
 .card {
   gap: var(--dl-space-space-unit);
   flex: 1;
@@ -105,6 +114,7 @@
   justify-content: flex-start;
   background-color: #E6F9E0;
 }
+
 .link {
   color: rgb(18, 40, 33);
   width: 100%;
@@ -115,9 +125,11 @@
   font-family: Lato;
   line-height: 36px;
 }
+
 .link:hover {
   color: rgba(18, 40, 33, 0.5);
 }
+
 .quote {
   gap: 56px;
   width: 100%;
@@ -126,9 +138,11 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .active-quote {
   display: flex;
 }
+
 .partner-container {
   width: 160px;
   height: 160px;
@@ -141,13 +155,16 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .partner-container:hover {
   background-color: #122821;
 }
+
 .partner-image {
   height: 40px;
   object-fit: cover;
 }
+
 .Content {
   font-size: 16px;
   font-family: Lora;
@@ -161,15 +178,18 @@
   .switch {
     padding-bottom: var(--dl-space-space-halfunit);
   }
+
   .partner-container {
     width: 60px;
     height: 60px;
   }
+
   .partner-image {
     height: 15px;
   }
 }
-.big-calender{
+
+.big-calender {
   width: 100%;
 }
 
@@ -259,3 +279,16 @@
   background: #b7b7b7;
 }
 
+h1,
+h2,
+h3,
+h4,
+h6,
+h5 {
+  color: #ebcf02 !important;
+}
+
+button,
+.button {
+  background-color: #ebcf02 !important;
+}
