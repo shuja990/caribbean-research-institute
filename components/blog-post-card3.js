@@ -29,7 +29,8 @@ const BlogPostCard3 = (props) => {
           }
           .blog-post-card3-image {
             width: 500px;
-            object-fit: cover;
+            height:400px;
+            object-fit: contain;
           }
           .blog-post-card3-container {
             flex: 1;

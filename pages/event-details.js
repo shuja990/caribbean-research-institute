@@ -63,7 +63,7 @@ const EventDetails = (props) => {
           </div>
           <img
             alt="image"
-            src="https://images.unsplash.com/photo-1471086569966-db3eebc25a59?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDIwfHxtaW5pbWFsaXNtJTIwcGxhbnR8ZW58MHx8fHwxNjI2MTgyODMw&amp;ixlib=rb-1.2.1&amp;w=1200"
+            src="/playground_assets/event-details.jpg"
             className="event-details-image"
           />
         </div>

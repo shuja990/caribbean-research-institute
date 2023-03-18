@@ -28,9 +28,14 @@ const EventsCalendar = () => {
   const events = [
     {
       start: moment().toDate(),
-      end: moment().add(1, "days").toDate(),
+      end: moment().add(0, "days").toDate(),
       title: "Caribbean Research Institute",
     },
+    {
+      start: moment('2023-03-15').toDate(),
+      end: moment('2023-03-15').toDate(),
+      title: "Caribbean Research Institute",
+    }
   ];
   return (
     <div className="big-calender">

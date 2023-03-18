@@ -74,7 +74,7 @@ const Footer = (props) => {
             display: flex;
             position: relative;
             padding: 10px;
-            align-items: flex-start;
+            align-items: center;
             padding-left: var(--dl-space-space-oneandhalfunits);
             padding-right: var(--dl-space-space-oneandhalfunits);
             flex-direction: row;

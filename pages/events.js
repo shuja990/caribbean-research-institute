@@ -19,9 +19,10 @@ const Events = (props) => {
           />
         </Head>
         <Navbar rootClassName="navbar-root-class-name4"></Navbar>
-        <div className="events-blog" 
-            style={{ width: "100%", marginLeft: "auto", marginRight: "auto" }}
-            >
+        <div
+          className="events-blog"
+          style={{ width: "100%", marginLeft: "auto", marginRight: "auto" }}
+        >
           <div
             className="events-container1"
             style={{ width: "100%", marginLeft: "auto", marginRight: "auto" }}
@@ -29,7 +30,7 @@ const Events = (props) => {
             <EventsCalendar />
           </div>
         </div>
-        
+
         <div className="events-banner">
           <h1 className="events-text">UPCOMING EVENTS</h1>
           <span className="events-text01">
@@ -60,32 +61,17 @@ const Events = (props) => {
             <Link href="/event-details">
               <a className="events-link">
                 <BlogPostCard3
+                  title={
+                    "Caribbean Research Center Speaker Series: Jamaican Opposition Leader: Mark Golding M.P."
+                  }
+                  image_src="/playground_assets/home1.jpg"
+                  description="Caribbean Research Center Speaker Series: Jamaican Opposition Leader: Mark Golding M.P."
                   rootClassName="rootClassName1"
                   className="events-component1"
                 ></BlogPostCard3>
               </a>
             </Link>
           </div>
-          <div className="events-container2">
-            <Link href="/event-details">
-              <a className="events-link1">
-                <BlogPostCard3
-                  image_src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDl8fHdvcmt8ZW58MHx8fHwxNjI2NDUwNzky&amp;ixlib=rb-1.2.1&amp;h=1000"
-                  rootClassName="rootClassName2"
-                  className="events-component2"
-                ></BlogPostCard3>
-              </a>
-            </Link>
-          </div>
-          <Link href="/event-details">
-            <a className="events-link2">
-              <BlogPostCard3
-                image_src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDExfHx3b3JrJTIwb2ZmaWNlfGVufDB8fHx8MTYyNjQ1MDgzMQ&amp;ixlib=rb-1.2.1&amp;h=1000"
-                rootClassName="rootClassName"
-                className="events-component3"
-              ></BlogPostCard3>
-            </a>
-          </Link>
         </div>
         <div className="events-banner1">
           <h1 className="events-text05">PAST EVENTS</h1>
@@ -113,36 +99,21 @@ const Events = (props) => {
           <div className="events-btn-group1"></div>
         </div>
         <div className="events-blog1">
-          <div className="events-container3">
+        <div className="events-container1">
             <Link href="/event-details">
-              <a className="events-link3">
+              <a className="events-link">
                 <BlogPostCard3
-                  rootClassName="rootClassName4"
-                  className="events-component4"
+                  title={
+                    "Caribbean Research Center Speaker Series: Jamaican Opposition Leader: Mark Golding M.P."
+                  }
+                  image_src="/playground_assets/home1.jpg"
+                  description="Caribbean Research Center Speaker Series: Jamaican Opposition Leader: Mark Golding M.P."
+                  rootClassName="rootClassName1"
+                  className="events-component1"
                 ></BlogPostCard3>
               </a>
             </Link>
           </div>
-          <div className="events-container4">
-            <Link href="/event-details">
-              <a className="events-link4">
-                <BlogPostCard3
-                  image_src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDl8fHdvcmt8ZW58MHx8fHwxNjI2NDUwNzky&amp;ixlib=rb-1.2.1&amp;h=1000"
-                  rootClassName="rootClassName5"
-                  className="events-component5"
-                ></BlogPostCard3>
-              </a>
-            </Link>
-          </div>
-          <Link href="/event-details">
-            <a className="events-link5">
-              <BlogPostCard3
-                image_src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDExfHx3b3JrJTIwb2ZmaWNlfGVufDB8fHx8MTYyNjQ1MDgzMQ&amp;ixlib=rb-1.2.1&amp;h=1000"
-                rootClassName="rootClassName3"
-                className="events-component6"
-              ></BlogPostCard3>
-            </a>
-          </Link>
         </div>
         <Footer rootClassName="footer-root-class-name2"></Footer>
       </div>

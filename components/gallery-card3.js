@@ -86,8 +86,8 @@ GalleryCard3.defaultProps = {
   image_src:
     'https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fG1pbmltYWxpc20lMjBjb3VjaHxlbnwwfHx8fDE2MjY0NDg1NTk&ixlib=rb-1.2.1&h=1000',
   image_alt: 'image',
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  title: 'Project Title',
+  // subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+  title: 'SYEP 2022',
 }
 
 GalleryCard3.propTypes = {

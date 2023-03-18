@@ -46,12 +46,12 @@ const Home = (props) => {
           <div className="home-image01">
             <img
               alt="image"
-              src="/playground_assets/hero%20%231-1500w.png"
+              src="/playground_assets/4732.jpg"
               className="home-image02"
             />
             <img
               alt="image"
-              src="/playground_assets/hero%20%232-1500w.png"
+              src="/playground_assets/home.jpg"
               className="home-image03"
             />
           </div>
@@ -346,7 +346,7 @@ const Home = (props) => {
             </div>
           </div>
         </section> */}
-        <Services></Services>
+        {/* <Services></Services> */}
         <section className="home-banner">
           <div className="home-container2">
             <div className="home-header">
@@ -364,12 +364,12 @@ const Home = (props) => {
             </button>
           </div>
         </section>
-        <section className="home-galleries">
+        <section className="home-galleries" style={{ marginTop: "18px" }}>
           <div className="home-gallery-desktop">
             <div className="home-column07">
               <img
                 alt="image"
-                src="/playground_assets/pexels-darina-belonogova-7959670%201-1300w.png"
+                src="/playground_assets/home1.jpg"
                 className="home-image41"
               />
             </div>
@@ -378,19 +378,19 @@ const Home = (props) => {
                 <div className="home-yellow"></div>
                 <img
                   alt="image"
-                  src="/playground_assets/pexels-darina-belonogova-8373875%203-1300w.png"
+                  src="/playground_assets/home2.jpg"
                   className="home-image42"
                 />
               </div>
               <div className="home-row4">
                 <img
                   alt="image"
-                  src="/playground_assets/pexels-darina-belonogova-7964869%201-500w.png"
+                  src="/playground_assets/home3.jpg"
                   className="home-image43"
                 />
                 <img
                   alt="image"
-                  src="/playground_assets/group%202106.svg"
+                  src="/playground_assets/home4.jpg"
                   className="home-image44"
                 />
               </div>
@@ -517,7 +517,7 @@ const Home = (props) => {
             line-height: 92px;
           }
           .home-description {
-            color: rgb(18, 40, 33);
+            color: rgb(18, 40, 33) !important;
             font-size: 24px;
             max-width: 600px;
             font-family: Lato;
@@ -1039,7 +1039,7 @@ const Home = (props) => {
             line-height: 46px;
           }
           .home-description1 {
-            color: rgb(230, 249, 224);
+            color: rgb(230, 249, 224) !important;
             width: 100%;
             font-size: 20px;
             max-width: 550px;
@@ -1470,7 +1470,7 @@ const Home = (props) => {
               line-height: 46px;
             }
             .home-description {
-              font-size: 16px;
+              font-size: 18px;
               line-height: 24px;
             }
             .home-text {
@@ -1640,7 +1640,7 @@ const Home = (props) => {
               line-height: 41px;
             }
             .home-description1 {
-              font-size: 16px;
+              font-size: 18px;
               line-height: 24px;
             }
             .home-image45 {

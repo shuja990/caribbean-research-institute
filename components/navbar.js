@@ -54,6 +54,11 @@ const Navbar = (props) => {
               <button className="navbar-button4 button">
                 <span>{props.text4}</span>
               </button>
+              <Link href="/contact">
+                <a className="navbar-link3 button">
+                  <span>{'Contact Us'}</span>
+                </a>
+              </Link>
             </nav>
           </div>
           <div data-thq="thq-burger-menu" className="navbar-burger-menu">
@@ -111,6 +116,11 @@ const Navbar = (props) => {
               <button className="navbar-button6 button">
                 <span>{props.text811}</span>
               </button>
+              <Link href="/contact">
+                <a className="navbar-link7 button">
+                  <span>Contact Us</span>
+                </a>
+              </Link>
             </nav>
             <div className="navbar-social-bar">
               <svg
