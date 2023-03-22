@@ -1,48 +1,62 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 
 import Navbar from "../components/navbar";
 import Services from "../components/services";
 import BlogPostCard11 from "../components/blog-post-card11";
 import Footer from "../components/footer";
+import VideoCard from "../components/VideoCard";
 
 const News = (props) => {
+  const [videos, setVideos] = useState([]);
+  useEffect(() => {
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+    console.log(process.env.NEXT_PUBLIC_YOUTUBE_API_KEY);
+
+    fetch(
+      `https://www.googleapis.com/youtube/v3/search?key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}&channelId=UCs3Ykf0MT9zXKak_CCJg5Wg&part=snippet,id&order=date`,
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        const video = data?.items?.map((item) => {
+          return {
+            title: item?.snippet?.title,
+            url: `https://www.youtube.com/embed/${item?.id?.videoId}`,
+          };
+        });
+        setVideos(video);
+      })
+      .catch((error) => console.log("error", error));
+  }, []);
   return (
     <>
       <div className="news-container">
         <Head>
-          <title>News - Caribbean Research Institute</title>
+          <title>Videos - Caribbean Research Institute</title>
           <meta
             property="og:title"
             content="News - Caribbean Research Institute"
           />
         </Head>
         <Navbar rootClassName="navbar-root-class-name"></Navbar>
-        <Services rootClassName="services-root-class-name"></Services>
+        <Services
+          rootClassName="services-root-class-name"
+          heading={"Videos"}
+          text={
+            "Our media database includes the latest news footage and archives of past Caribbean Research Center videos. Here you will find the collection of publications and reports dating from the organization’s inception in 2000, all the way up to the present day. Check out some of our featured videos below and learn more about our efforts."
+          }
+        ></Services>
         <div className="news-blog">
-          <div className="news-container1">
-            <BlogPostCard11
-              rootClassName="rootClassName3"
-              image_src="https://images.unsplash.com/photo-1465925508512-1e7052bb62e6?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDIzfHxjaXR5JTIwY2FifGVufDB8fHx8MTYyNjQ1MDMwNA&amp;ixlib=rb-1.2.1&amp;h=1200"
-              title={"1-on-1 with Caribbean Research Center CEO"}
-            ></BlogPostCard11>
-          </div>
-          <div className="news-container2">
-            <BlogPostCard11
-              title={
-                "From Idea to Reality: The Evolution of Caribbean Research Center"
-              }
-              image_src="https://images.unsplash.com/photo-1465925508512-1e7052bb62e6?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDIzfHxjaXR5JTIwY2FifGVufDB8fHx8MTYyNjQ1MDMwNA&amp;ixlib=rb-1.2.1&amp;h=1200"
-              rootClassName="rootClassName2"
-            ></BlogPostCard11>
-          </div>
-          <div className="news-container3">
-            <BlogPostCard11
-              title={"Local Non-Profit Makes a Splash with Summer Fundraiser"}
-              image_src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDE4fHxjaXR5fGVufDB8fHx8MTYyNjQ1MDI4MQ&amp;ixlib=rb-1.2.1&amp;h=1200"
-              rootClassName="rootClassName1"
-            ></BlogPostCard11>
-          </div>
+          {videos?.map((video) => (
+            <div className="news-container1">
+              <VideoCard videoUrl={video?.url} title={video?.title} />
+            </div>
+          ))}
         </div>
         <Footer rootClassName="footer-root-class-name"></Footer>
       </div>
@@ -59,11 +73,12 @@ const News = (props) => {
           }
           .news-blog {
             width: 100%;
+            flex-wrap: wrap;
             display: flex;
             padding: var(--dl-space-space-threeunits);
             max-width: var(--dl-size-size-maxwidth);
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
           }
           .news-container1 {
             display: flex;
@@ -107,6 +122,7 @@ const News = (props) => {
               padding-left: var(--dl-space-space-unit);
               padding-right: var(--dl-space-space-unit);
               padding-bottom: var(--dl-space-space-twounits);
+              justify-content: center;
             }
           }
         `}
