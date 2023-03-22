@@ -39,7 +39,9 @@ const Navbar = (props) => {
                 </Link>
               </button>
               <button className="navbar-button2 button">
-                <span>{props.text2}</span>
+                <Link href="/youtube">
+                  <a className="navbar-link2">{props.text2}</a>
+                </Link>{" "}
               </button>
               <Link href="/team">
                 <a className="navbar-link3 button">
@@ -56,7 +58,7 @@ const Navbar = (props) => {
               </button>
               <Link href="/contact">
                 <a className="navbar-link3 button">
-                  <span>{'Contact Us'}</span>
+                  <span>{"Contact Us"}</span>
                 </a>
               </Link>
             </nav>
@@ -106,7 +108,11 @@ const Navbar = (props) => {
                 </a>
               </Link>
               <button className="navbar-button5 button">
-                <span>{props.text81}</span>
+                <Link href="/youtube">
+                  <a className="navbar-link7 button">
+                    <span>YouTube</span>
+                  </a>
+                </Link>{" "}
               </button>
               <Link href="/gallery">
                 <a className="navbar-link8 button">
