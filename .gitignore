@@ -7,7 +7,8 @@
 node_modules/
 dist/
 .next/
-
+.env
+.env.local
 
 # Compiled Java class files
 *.class
@@ -41,6 +42,8 @@ Thumbs.db
 *.app
 *.exe
 *.war
+*.env
+*.env.local
 
 # Large media files
 *.mp4
