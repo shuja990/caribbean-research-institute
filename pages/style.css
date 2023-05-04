@@ -583,6 +583,10 @@ textarea.input {
     max-width: 709px;
 }
 
+a{
+  color: #000000 !important;
+}
+
 section#post-28 {
     padding-top: 155px;
 }
