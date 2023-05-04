@@ -19,7 +19,7 @@ const Login = (props) => {
 
   useEffect(() => {
     if (userInfo) {
-      router.push("/");
+      router.push("/admin");
     }
   }, [userInfo]);
 
@@ -27,6 +27,8 @@ const Login = (props) => {
     e.preventDefault();
     dispatch(login(email, password));
   };
+
+  
 
   return (
     <>
@@ -66,12 +68,9 @@ const Login = (props) => {
                 />
               </div>
               <div className="d-grid">
-                <button className="btn btn-primary" type="submit">
-                  <button
-                    className="btn btn-primary"
-                    type="submit"
+                <button className="btn btn-primary" type="submit"
                     disabled={loading}
-                  >
+                    >
                     {loading ? (
                       <Spinner
                         as="span"
@@ -83,18 +82,9 @@ const Login = (props) => {
                     ) : (
                       "Login"
                     )}
-                  </button>
                 </button>
               </div>
             </form>
-            <div className="mt-3">
-              <p className="mb-0  text-center">
-                Don't have an account?{" "}
-                <Link href="/sign-up" className="text-primary fw-bold">
-                  <a className="text-primary fw-bold">Sign Up</a>
-                </Link>
-              </p>
-            </div>
           </div>
         </div>
         <Footer />
