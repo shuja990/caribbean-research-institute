@@ -50,9 +50,6 @@
   background-color: rgba(230, 249, 224, 1);
 }
 
-.button:hover {
-  opacity: 0.5;
-}
 
 .textarea {
   color: var(--dl-color-gray-black);
@@ -320,31 +317,54 @@ input {
 }
 
 textarea {
-outline: none;
-border: none; 
-font-family: Helvetica Neue, "Montserrat", sans-serif;
+  outline: none;
+  border: none;
+  font-family: Helvetica Neue, "Montserrat", sans-serif;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   border-color: transparent !important;
 }
 
-input::-webkit-input-placeholder { color: #bdbdd3;}
-input:-moz-placeholder { color: #bdbdd3;}
-input::-moz-placeholder { color: #bdbdd3;}
-input:-ms-input-placeholder { color: #bdbdd3;}
+input::-webkit-input-placeholder {
+  color: #bdbdd3;
+}
 
-textarea::-webkit-input-placeholder { color: #bdbdd3;}
-textarea:-moz-placeholder { color: #bdbdd3;}
-textarea::-moz-placeholder { color: #bdbdd3;}
-textarea:-ms-input-placeholder { color: #bdbdd3;}
+input:-moz-placeholder {
+  color: #bdbdd3;
+}
+
+input::-moz-placeholder {
+  color: #bdbdd3;
+}
+
+input:-ms-input-placeholder {
+  color: #bdbdd3;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #bdbdd3;
+}
+
+textarea:-moz-placeholder {
+  color: #bdbdd3;
+}
+
+textarea::-moz-placeholder {
+  color: #bdbdd3;
+}
+
+textarea:-ms-input-placeholder {
+  color: #bdbdd3;
+}
 
 
 /*==================================================================
 [ Contact - Area]*/
 
 .container-contact {
-  width: 100%;  
+  width: 100%;
   min-height: 70vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -385,7 +405,7 @@ textarea:-ms-input-placeholder { color: #bdbdd3;}
   color: red;
   border-radius: 3px;
 }
- 
+
 .success {
   padding: 5px 9px;
   border: 1px solid green;
@@ -460,14 +480,14 @@ textarea.input {
   border-radius: 31px;
   background-color: #fff;
   pointer-events: none;
-  
+
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-.input:focus + .focus-input100 {
+.input:focus+.focus-input100 {
   width: calc(100% + 20px);
 }
 
@@ -496,7 +516,7 @@ textarea.input {
   min-width: 250px;
   height: 50px;
   background-color: transparent;
-  border-radius:7px;
+  border-radius: 7px;
   cursor: pointer;
 
   font-family: "Montserrat";
@@ -530,7 +550,7 @@ textarea.input {
   border-radius: 7px;
   background-color: #9e8c7b;
   pointer-events: none;
-  
+
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -556,17 +576,17 @@ textarea.input {
   padding: 10px 30px 0px 30px;
 }
 
-.grid-container > div {
+.grid-container>div {
   padding: 20px 0;
   font-size: 10px;
 }
 
 .left-align {
-    text-align: left;
+  text-align: left;
 }
 
 .right-align {
-    text-align: right;
+  text-align: right;
 }
 
 
@@ -574,61 +594,104 @@ textarea.input {
 [  Hero title ]*/
 
 
-.listing-hero {
-}
+.listing-hero {}
 
 .hero-heading {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 709px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 709px;
 }
 
-a{
+a {
   color: #000000 !important;
 }
 
 section#post-28 {
-    padding-top: 155px;
+  padding-top: 155px;
 }
 
 .hero-large {
-    display: inline-block;
-    width: 40%;
-    font-weight: 300;
-    font-size: 56px;
-    line-height: 56px;
-    position: relative;
-    top: -19px;
-    color: #454545;
+  display: inline-block;
+  width: 40%;
+  font-weight: 300;
+  font-size: 56px;
+  line-height: 56px;
+  position: relative;
+  top: -19px;
+  color: #454545;
 }
 
 .hero-text {
-    display: inline-block;
-    width: 59%;
-    vertical-align: top;
-    border-left: 1px solid #8E8E8E;
-    padding: 0 33px;
-    font-size: 15px;
-    line-height: 23px;
-    /* or 153% */
-    color: #454545;
-    vertical-align: top;
+  display: inline-block;
+  width: 59%;
+  vertical-align: top;
+  border-left: 1px solid #8E8E8E;
+  padding: 0 33px;
+  font-size: 15px;
+  line-height: 23px;
+  /* or 153% */
+  color: #454545;
+  vertical-align: top;
 }
 
 
 .hero-text .btn.no-border {
-    margin-top: 15px;
-    margin-bottom: 6.5px;
-    /* background-image: url(../images/Path3.png); */
-    background-repeat: no-repeat;
-    background-size: 25px;
-    display: block;
-    background-position: right center;
-    max-width: 99px;
+  margin-top: 15px;
+  margin-bottom: 6.5px;
+  /* background-image: url(../images/Path3.png); */
+  background-repeat: no-repeat;
+  background-size: 25px;
+  display: block;
+  background-position: right center;
+  max-width: 99px;
 }
 
 .hero-text i {
-    font-style: normal;
-    margin-top: -6px;
-    display: block;
+  font-style: normal;
+  margin-top: -6px;
+  display: block;
+}
+
+
+/* Add a CSS class for dark theme */
+body[data-theme='dark_theme'] {
+  --white: #fff;
+  --bg-color: #000;
+  --color: #fff;
+  --secondary-color: #ff7f57;
+  --icon-bg-color: #333;
+  --icon-color: #fff;
+}
+
+/* Style the newsletter component */
+.newsletter-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color);
+  color: var(--color);
+  text-align: center;
+  height: 80vh;
+  /* This ensures the container takes up the full viewport height */
+}
+
+
+.newsletter-heading {
+  font-size: 64px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.dot {
+  color: var(--secondary-color);
+}
+
+.newsletter-text {
+  text-align: center;
+  margin: 18px;
+  font-family: 'Muli', sans-serif;
+  font-weight: normal;
 }

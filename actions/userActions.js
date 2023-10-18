@@ -37,7 +37,6 @@ export const login = (email, password) => async (dispatch) => {
     });
 
     const data = await signInWithEmailAndPassword(auth, email, password);
-console.log(data)
     if (data) {
       localStorage.setItem("userInfo", JSON.stringify(data));
       dispatch({

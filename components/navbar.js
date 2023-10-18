@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import PropTypes from "prop-types";
+import { NavDropdown } from "react-bootstrap";
 
 const Navbar = (props) => {
   return (
@@ -28,34 +29,64 @@ const Navbar = (props) => {
             className="navbar-desktop-menu"
           >
             <nav className="navbar-links">
-              <button className="navbar-button button">
-                <Link href="/news">
-                  <a className="navbar-link1">{props.text}</a>
-                </Link>
-              </button>
-              <button className="navbar-button1 button">
-                <Link href="/events">
-                  <a className="navbar-link2">{props.text1}</a>
-                </Link>
-              </button>
-              <button className="navbar-button2 button">
-                <Link href="/youtube">
-                  <a className="navbar-link2">{props.text2}</a>
-                </Link>{" "}
-              </button>
-              <Link href="/team">
-                <a className="navbar-link3 button">
-                  <span>Team</span>
-                </a>
-              </Link>
-              <Link href="/gallery">
-                <a className="navbar-link3 button">
-                  <span>{props.text3}</span>
-                </a>
-              </Link>
-              <button className="navbar-button4 button">
-                <span>{props.text4}</span>
-              </button>
+              <NavDropdown className="navbar-button button p-0 m-0" title="About Us" id="basic-nav-dropdown">
+                <NavDropdown.Item>
+                  <Link href="/what-we-do-&-why" className="navbar-link1">
+                    What we do & Why
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link href="/our-history" className="navbar-link1">
+                    Our History
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link href="/team" className="navbar-link1">
+                    Meet the Team
+                  </Link>
+                </NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown className="navbar-button button p-0 m-0" title="News, Research & Publications" id="basic-nav-dropdown">
+                <NavDropdown.Item>
+                  <Link href="/newsletter" className="navbar-link1">
+                    CRC Newsletter
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link href="/news" className="navbar-link1">
+                    Caribbean News
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link href="/book-publications" className="navbar-link1">
+                    Book Publications
+                  </Link>
+                </NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown className="navbar-button button p-0 m-0" title="Gallery " id="basic-nav-dropdown">
+                <NavDropdown.Item>
+                  <Link href="/events" className="navbar-link1">
+                    Events
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link href="/gallery" className="navbar-link1">
+                    30+ Years of Service
+                  </Link>
+                </NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown className="navbar-button button p-0 m-0" title="AudioVisual Resources" id="basic-nav-dropdown">
+                <NavDropdown.Item>
+                  <Link href="/events" className="navbar-link1">
+                    YouTube
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link href="/digital-archive" className="navbar-link1">
+                    Digital Archive
+                  </Link>
+                </NavDropdown.Item>
+              </NavDropdown>
               <Link href="/contact">
                 <a className="navbar-link3 button">
                   <span>{"Contact Us"}</span>
@@ -70,7 +101,7 @@ const Navbar = (props) => {
               className="navbar-hamburger"
             />
           </div>
-          <div data-thq="thq-mobile-menu" className="navbar-mobile-menu">
+          <div data-thq="thq-mobile-menu " className="navbar-mobile-menu 100vh">
             <div className="navbar-top">
               <div className="navbar-branding1">
                 <Link href="/">
@@ -92,36 +123,69 @@ const Navbar = (props) => {
                   <span>{props.text7}</span>
                 </a>
               </Link>
-              <Link href="/news">
-                <a className="navbar-link6 button">
-                  <span>{props.text8}</span>
+              <Link href="/what-we-do-&-why" >
+                <a className="navbar-link5 button">
+
+                  What we do & Why
                 </a>
               </Link>
-              <Link href="/events">
-                <a className="navbar-link7 button">
-                  <span>{props.text82}</span>
+              <Link href="/our-history" >
+                <a className="navbar-link5 button">
+
+                  Our History
                 </a>
               </Link>
-              <Link href="/team">
-                <a className="navbar-link7 button">
-                  <span>Team</span>
+              <Link href="/team" >
+                <a className="navbar-link5 button">
+
+                  Meet the Team
                 </a>
               </Link>
-              <button className="navbar-button5 button">
-                <Link href="/youtube">
-                  <a className="navbar-link7 button">
-                    <span>YouTube</span>
-                  </a>
-                </Link>{" "}
-              </button>
-              <Link href="/gallery">
-                <a className="navbar-link8 button">
-                  <span>{props.text812}</span>
+              <Link href="/newsletter" >
+                <a className="navbar-link5 button">
+
+                  CRC Newsletter
                 </a>
               </Link>
-              <button className="navbar-button6 button">
-                <span>{props.text811}</span>
-              </button>
+              <Link href="/news" >
+                <a className="navbar-link5 button">
+
+                  Caribbean News
+                </a>
+              </Link>
+              <Link href="/book-publications" >
+                <a className="navbar-link5 button">
+
+                  Book Publications
+                </a>
+              </Link>
+              <Link href="/events" >
+                <a className="navbar-link5 button">
+
+                  Events
+                </a>
+
+              </Link>
+              <Link href="/gallery" >
+                <a className="navbar-link5 button">
+
+                  30+ Years of Service
+                </a>
+
+              </Link>
+              <Link href="/events" >
+                <a className="navbar-link5 button">
+
+                  YouTube
+                </a>
+
+              </Link>
+              <Link href="/digital-archive" >
+                <a className="navbar-link5 button">
+
+                  Digital Archive
+                </a>
+              </Link>
               <Link href="/contact">
                 <a className="navbar-link7 button">
                   <span>Contact Us</span>
@@ -158,8 +222,8 @@ const Navbar = (props) => {
               </svg>
             </div>
           </div>
-        </header>
-      </div>
+        </header >
+      </div >
       <style jsx>
         {`
           .navbar-navbar {
@@ -229,7 +293,7 @@ const Navbar = (props) => {
             background-color: transparent;
           }
           .navbar-link1 {
-            text-decoration: none;
+            text-decoration: none !important;
           }
           .navbar-button1 {
             color: rgb(18, 40, 33);
@@ -298,6 +362,7 @@ const Navbar = (props) => {
             left: 0px;
             width: 100%;
             height: 100vh;
+            overflow-y: auto;
             display: flex;
             z-index: 100;
             position: fixed;
@@ -437,7 +502,7 @@ const Navbar = (props) => {
             height: var(--dl-size-size-xsmall);
           }
 
-          @media (max-width: 991px) {
+          @media (max-width: 1100px) {
             .navbar-navbar-interactive {
               padding-left: var(--dl-space-space-oneandhalfunits);
               padding-right: var(--dl-space-space-oneandhalfunits);
@@ -449,7 +514,7 @@ const Navbar = (props) => {
               display: none;
             }
           }
-          @media (max-width: 767px) {
+          @media (max-width: 1100px) {
             .navbar-desktop-menu {
               display: none;
             }

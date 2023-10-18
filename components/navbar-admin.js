@@ -38,6 +38,11 @@ const NavBarAdmin = (props) => {
                   <a className="navbar-link1">Newsletter</a>
                 </Link>
               </button>
+              <button className="navbar-button button">
+                <Link href="/admin/digital-archive">
+                  <a className="navbar-link1">Digital Archive</a>
+                </Link>
+              </button>
               <button className="navbar-button1 button">
                 <Link href="/admin/events-admin">
                   <a className="navbar-link2">{props.text1}</a>
@@ -92,6 +97,11 @@ const NavBarAdmin = (props) => {
               <Link href="/admin/newsletter-admin">
                 <a className="navbar-link6 button">
                   <span>Newsletter</span>
+                </a>
+              </Link>
+              <Link href="/admin/digital-archive">
+                <a className="navbar-link6 button">
+                  <span>Digital Archive</span>
                 </a>
               </Link>
               <Link href="/admin/events-admin">

@@ -6,69 +6,62 @@ import Services from "../components/services";
 import BlogPostCard11 from "../components/blog-post-card11";
 import Footer from "../components/footer";
 import VideoCard from "../components/VideoCard";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "./_app";
+import DigitalArchiveCard from "../components/DigitalArchiveCard";
 
 const News = (props) => {
-  const [videos, setVideos] = useState([]);
-  useEffect(() => {
-    var requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
-    console.log(process.env.NEXT_PUBLIC_YOUTUBE_API_KEY);
+    const [videos, setVideos] = useState([]);
 
-    fetch(
-      `https://www.googleapis.com/youtube/v3/search?key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}&channelId=UCs3Ykf0MT9zXKak_CCJg5Wg&part=snippet,id&order=date`,
-      requestOptions
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        const video = data?.items?.map((item) => {
-          return {
-            title: item?.snippet?.title,
-            url: `https://www.youtube.com/embed/${item?.id?.videoId}`,
-          };
-        });
-        setVideos(video);
-      })
-      .catch((error) => console.log("error", error));
-  }, []);
-  return (
-    <>
-      <div className="news-container">
-        <Head>
-          <title>Videos - Caribbean Research Institute</title>
-          <meta
-            property="og:title"
-            content="News - Caribbean Research Institute"
-          />
-        </Head>
-        <Navbar rootClassName="navbar-root-class-name"></Navbar>
-        <Services
-          rootClassName="services-root-class-name"
-          heading={"Videos"}
-          text={
-            "Our media database includes the latest news footage and archives of past Caribbean Research Center videos. Here you will find the collection of publications and reports dating from the organization’s inception in 2000, all the way up to the present day. Check out some of our featured videos below and learn more about our efforts."
-          }
-        ></Services>
-        <h2 className="text-left">Featured</h2>
-        <div className="news-blog">
-          <div className="news-container1">
-            <VideoCard videoUrl={"https://www.youtube.com/embed/videoseries?si=awGqULGrKzzdUnDt&amp;list=PL2DVTo33IpOFMyGUDW8SDg2E0gmhXgciD"} title={"Caribbean Focus"} />
-            <VideoCard videoUrl={"https://www.youtube.com/embed/videoseries?si=3p5yyflJntMBT6xE&amp;list=PL2DVTo33IpOFlVIi_z6vyLXdH6qJ1I234"} title={"Live Streams"} />
-          </div>
-        </div>
-        <div className="news-blog">
-          {videos?.map((video) => (
-            <div className="news-container1">
-              <VideoCard videoUrl={video?.url} title={video?.title} />
+    const getNews = async () => {
+        try {
+            let data = [];
+            const querySnapshot = await getDocs(collection(db, "digitalArchive"));
+            querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                data.push({
+                    id: doc.id,
+                    ...doc.data(),
+                });
+            });
+            setVideos(data);
+        } catch (error) {
+        }
+    };
+
+    useEffect(() => {
+        getNews();
+    }, []);
+
+    return (
+        <>
+            <div className="news-container">
+                <Head>
+                    <title>Digital Archive - Caribbean Research Institute</title>
+                    <meta
+                        property="og:title"
+                        content="Digital Archive - Caribbean Research Institute"
+                    />
+                </Head>
+                <Navbar rootClassName="navbar-root-class-name"></Navbar>
+                <Services
+                    rootClassName="services-root-class-name"
+                    heading={"Digital Archive"}
+                    text={
+                        ""
+                    }
+                ></Services>
+                <div className="news-blog">
+                    {videos?.map((video) => (
+                        <div className="news-container1">
+                        <DigitalArchiveCard videoUrl={video?.file} title={video?.title} tags={video?.tags} />
+                        </div>
+                    ))}
+                </div>
+                <Footer rootClassName="footer-root-class-name"></Footer>
             </div>
-          ))}
-        </div>
-        <Footer rootClassName="footer-root-class-name"></Footer>
-      </div>
-      <style jsx>
-        {`
+            <style jsx>
+                {`
           .news-container {
             width: 100%;
             display: flex;
@@ -133,9 +126,9 @@ const News = (props) => {
             }
           }
         `}
-      </style>
-    </>
-  );
+            </style>
+        </>
+    );
 };
 
 export default News;
